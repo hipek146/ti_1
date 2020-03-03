@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Efekty cząsteczkowe</title>
+    <meta name="Description" content="Pierwszy projekt na Techniki Internetowe opisujący efekty cząsteczkowe.">
+    <meta name="Keywords" content="efekty cząsteczkowe projekt techniki internetowe">
+    <meta name="author" content="Piotr Litwin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>Efekty cząsteczkowe</header>
+
+    <main>
+        <article>
+            Efekty cząsteczkowe polegają na symulowaniu złożonych zjawisk takich jak np. dym, płomień, śnieg, w których
+            podstawowym obiektem jest duża grupa wirtualnych cząsteczek, traktowanych jak obiekty punktowe. Cząsteczki
+            mają
+            zwykle ograniczony czas istnienia, podlegają interakcji z otoczeniem, tj. odbijają się od przeszkód, ulegają
+            również wpływom sił zewnętrznych (np. grawitacji, czy sile wiatru). W zależności od pożądanego efektu są
+            reprezentowane na obrazie przez niewielkie obiekty - pojedyncze piksele, kreski, sprity itp. Ich wygląd i
+            kolor
+            może zależeć także od aktualnej prędkości, odległości od obserwatora i innych parametrów symulacji, np.
+            czasu
+            życia.
+        </article>
+
+        <div class="videoSection">
+            <div id="videoButton">Odtwórz wideo</div>
+            <video id="video" width="640" height="360" controls>
+                <source src="data/video.mp4" type="video/mp4">
+                Twoja przeglądarka nie wspiera video HTML5
+            </video>
+        </div>
+
+        <div class="section">
+            <div class="showHeader">Figury geometryczne</div>
+            <div class="show">
+                <canvas id="canvas_1" width="500" height="300"></canvas>
+
+                <div class="description">
+                    <div class="descriptionHeader">Częstotliwość generowania cząsteczek (/s)</div>
+                    <div class="sliderElement">
+                        1<input type="range" min="1" max="50" value="25" class="slider" id="canvas_1_slider">50
+                    </div>
+                    <div class="underSlider">
+                        <div>Częstotliwość: <div class="indicator" id="frequency"></div>
+                        </div>
+                        <div>Ilość cząsteczek: <div class="indicator" id="count_1"></div>
+                        </div>
+                    </div>
+                    <article>
+                        Prosty efekt cząsteczkowy wykorzystujący figury geometryczne - koła, kwadraty i trójkąty.
+                        Cząsteczki poruszają się w jednym
+                        kierunku z góry na dół. Wraz z upływem czasu zmienia się ich kolor, rotacja oraz powoli
+                        zanikają. Stan początkowy oraz prędkość zachodzonych zmian są generowane losowo.
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="showHeader right">Efekt ognia</div>
+            <div class="show">
+                <div class="description">
+                    <article>
+                        Symulacja ognia wymagała zdefiniowania miejsca w którym cząsteczki są generowane, określenia
+                        przedziału zmian kolorów, większej losowości (rozmiaru, kierunku cząstek). Osobno dodano dym -
+                        cząsteczki reprezentowane przez niewielkie obrazy. Podczas tworzenia efektu istnieje możliwość
+                        zaimplementowania interakcji z otoczeniem, jak na przykład symulacja wiatru, któremu poddają się
+                        cząsteczki.
+                    </article>
+                    <div class="descriptionHeader">Siła wiatru</div>
+                    <div class="sliderElement">
+                        1<input type="range" min="1" max="200" value="100" class="slider" id="canvas_2_slider">200
+                    </div>
+                    <div class="underSlider">
+                        <div>Siła wiatru: <div class="indicator" id="wind"></div>
+                        </div>
+                        <div>Ilość cząsteczek: <div class="indicator" id="count_2"></div>
+                        </div>
+                    </div>
+                </div>
+                <canvas id="canvas_2" width="500" height="300"></canvas>
+            </div>
+        </div>
+        <center><a href="doc.html"><b>Dokumentacja</b></a> </center>
+    </main>
+    <footer>Piotr Litwin 2020 &copy; Wszelkie
+        prawa zastrzeżone </footer>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+
+</html>
